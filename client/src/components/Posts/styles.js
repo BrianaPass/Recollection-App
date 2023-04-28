@@ -6,9 +6,6 @@ export default makeStyles(() => ({
       display: 'flex',
       alignItems: 'center',
     },
-    smMargin: {
-      margin: useTheme.spacing(1),
-    },
     actionDiv: {
       textAlign: 'center',
     },

@@ -7,6 +7,9 @@ import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import recollection from './images/recollection.png';
 import useStyles from './styles';
+import {ThemeProvider,styled } from '@mui/styles';
+import { createTheme } from '@mui/material/styles';
+
 
 const App = () => {
     const classes = useStyles();
@@ -15,9 +18,17 @@ const App = () => {
     useEffect(() => {
     dispatch(getPosts());
 }, [dispatch]);
-
+const MyComponent = styled('div')({
+    backgroundColor: 'red',
+  });
+  
+  const MyThemeComponent = styled('div')(({ theme }) => ({
+    padding: theme.spacing(1),
+  }));
+const theme = createTheme();
     return (
-        <Container maxwidth="lg">
+        <ThemeProvider theme={theme}>
+            <Container maxwidth="lg">
             <AppBar className={classes.appBar} position="static" color="inherit">
                 <Typography className={classes.heading} varaint="h1" align="center">Recollection</Typography>
                 <img className={classes.image} src={recollection} alt="recollection" height="60" />
@@ -34,6 +45,7 @@ const App = () => {
                 </Container>
             </Grow>
         </Container>
+        </ThemeProvider>
     );
 }
 export default App;
