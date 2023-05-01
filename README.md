@@ -14,4 +14,4 @@ To use this app, first clone it to your local machine. Next open your command li
 ## Usage
 Once started, open a browser and go to localport 3001. The application will be started there.
 
-![image](/assets/testScreenshot.png)
+![image](/assets/testScreenshot.jpg)
