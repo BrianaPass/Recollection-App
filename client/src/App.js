@@ -18,6 +18,7 @@ const App = () => {
     useEffect(() => {
     dispatch(getPosts());
 }, [dispatch]);
+
 const MyComponent = styled('div')({
     backgroundColor: 'red',
   });
@@ -39,10 +40,10 @@ const theme = createTheme();
                         <Grid item xs={12} sm={7}>
                             <Posts />
                         </Grid>
-                        <Grid item xs={12} sm={4}></Grid>
+                        {/* <Grid item xs={12} sm={4}></Grid> */}
                         <Form />
-                    </Grid>
-                </Container>
+                    </Grid >
+                </Container >
             </Grow>
         </Container>
         </ThemeProvider>
