@@ -13,12 +13,8 @@ const Post = (props) => {
     const classes = useStyles();
 
     return ( 
-<<<<<<< HEAD
-        <Card className={classes.card}>
-=======
         <Card className={classes.card} onClick={(e) => {console.log(props)}}>
->>>>>>> f669be751d4e640132aff29e5900e750eb671102
-            <CardMedia className={classes.media} image={props.selectedFile} title={props.title} />
+            <CardMedia className={classes.media} image={props.selectedFile} title={props.title} component='div'/>
             <div className={classes.overlay}>
                 <Typography variant="h6">{props.creator}</Typography>
                 <Typography variant="body2">{moment(props.createdAt).fromNow()}</Typography>
@@ -42,11 +38,7 @@ const Post = (props) => {
                     Like
                     {props.likeCount}
                 </Button>
-<<<<<<< HEAD
-                <Button size="small" color="primary" onClick={() => {}}>
-=======
                 <Button size="small" color="primary" onClick={(e) => {console.log(props)}}>
->>>>>>> f669be751d4e640132aff29e5900e750eb671102
                     <DeleteIcon fontSize="small" />
                     Delete
                 </Button>
@@ -56,7 +48,7 @@ const Post = (props) => {
 }
 
 Post.propTypes = {
-    selectedFile: PropTypes.string,
+    selectedFile: PropTypes.any,
     title: PropTypes.string,
     creator: PropTypes.string,
     createdAt:  PropTypes.string,
